@@ -119,8 +119,89 @@
 < navbar >
 <div class="navbar">
     <h1>SMA NEGERI 2 BABARSARI</h1>
-    
-
+    <td>
+        <tr>Beranda</tr>
+        <tr>Data Siswa</tr>
+        <tr>Tambah Siswa</tr>
+    </td>
 </div>
+
+    
+    <!section hero>
+    <section class="hero">
+        <div class="hero-box">
+            <h1>WELCOME</h1>
+            <div class="total">
+                TOTAL SISWA <br> 200 SISWA
+            </div>
+
+            <div class="nilai">
+                <div class="tinggi">85 - 100</div>
+                <div class="sedang">70 - 84</div>
+                <div class="rendah">< 70</div>
+            </div>
+            <a href="analisis.php">
+                <button>Mulai Input Data</button>
+            </a>
+
+        </div>
+     </section>
+
+     <!peminatan>
+     <section class="section" id="peminatan">
+        <div class="overlay">
+            <div class="grid">
+
+            <div class="card">
+                <h3>peminatan Komputer</h3>
+                <a href="komputer.php">
+                    <button>Lihat detail</button>
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>peminatan IPA</h3>
+                <a href="ipa.php">
+                    <button>Lihat detail</button>
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>peminatan IPS</h3>
+                <a href="ips.php">
+                    <button>Lihat detail</button>
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>peminatan FISIKA</h3>
+                <a href="fisika.php">
+                    <button>Lihat detail</button>
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>peminatan BIOLOGI</h3>
+                <a href="biologi.php">
+                    <button>Lihat detail</button>
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>peminatan Matematika</h3>
+                <a href="matematika.php">
+                    <button>Lihat detail</button>
+                </a>
+            </div>
+            </div>
+        </div>
+     </section>
+<script>
+    function scrollDown() {
+        document.getElementById("peminatan").scrollIntoView({
+            beaviior: "smooth"
+        });
+    }
+</script>
 </body>
 </html>
