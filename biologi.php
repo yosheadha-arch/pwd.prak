@@ -21,7 +21,8 @@
             justify-content: center;
             align-items: center;
         }
-
+            
+        /*kartu*/
         .card {
             background: rgba(255,255,255,0.95);
             width: 70%;
