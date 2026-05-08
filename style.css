@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "MyFont";
+    font-family: "Myfont";
     src: url("nice.otf");
 }
 
@@ -30,9 +30,9 @@ body {
 }
 
 .logo-text h1 {
-    margin: 0;
-    font-family: "MyFont";
+    font-family: "Myfont";
     font-size: 45px;
+    color: white;
 }
 
 .logo-text p {
