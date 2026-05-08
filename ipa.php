@@ -51,7 +51,42 @@
     
 </style>
 </head>
+
 <body>
+    <div class="card">
+
+    <div class="icon">🧪</div>
+
+    <h1>Peminatan Pengetahuan Alam (IPA)</h1>
+
+    <p>
+    Berorientasi pada pemahaman ilmiah dan eksperimen terhadap fenomena alam.
+    Cocok untuk siswa dengan rasa ingin tahu tinggi dan kemampuan analisis.
+    </p>
+
+    <h2>Mata Pelajaran Pendukung:</h2>
+    <td>
+        <tr>Biologi</tr>
+        <tr>Kimia</tr>
+        <tr>Fisika</tr>
+    </td>
     
+
+    <h2>Indikator Kesesuaian:</h2>
+    <td>
+        <tr>Biologi >=80</tr>
+        <tr>Kimia >=80</tr>
+        <tr>Fisika >=75</tr>
+    </td>
+
+    <h2>Rekomendasi Jurusan:</h2>
+    <p>Kedokteran, Farmasi, Bioteknologi, Ilmu Gizi</p>
+
+    <h2>Prospek Karier:</h2>
+    <p>Dokter, Peneliti, Analis Laboratorium</p>
+
+    <a href="beranda.php" class="btn">Kembali</a>
+
+</div>
 </body>
 </html>
