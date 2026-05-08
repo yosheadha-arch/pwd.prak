@@ -1,1 +1,89 @@
-<?php?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+    }
+
+    .navbar {
+        background: #1da1f2;
+        color: white;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar ul {
+        display: flex;
+        gap: 20px;
+        list-style: center;
+    }
+
+    .navbar a {
+        color: white;
+        gap: 20px;
+        list-style: none;
+    }
+
+    body {
+        background: url('') center/cover no-repeat;
+        min-height: 100vh;
+    }
+
+    .form-box {
+        width: 600px;
+        margin: 50px auto;
+        background: rgba(255,255,255,0.9);
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0 15px;
+        border-radius: 20px;
+        border: 2px solid black;
+        outline: none;
+    }
+
+    input:focus, select:focus {
+        border-color: #1da1f2;
+    }
+
+    button {
+        padding: 12px;
+        width: 100%;
+        border: none;
+        background: #1da1f2;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover{
+        background: #0d8ddb;
+    }
+</style>
+</head>
+<body>
+    <div class="form-box">
+        <form method="POST" action="inputnilai.php">
+            <label> label>
+    </div>
+</body>
+</html>
