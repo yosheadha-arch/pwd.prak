@@ -56,7 +56,7 @@
     }
     .tinggi {background: green;}
     .sedang {background: orange;}
-    .tinggi {background: red;}
+    .rendah {bacground: red;}
 
     .hero button {
         padding: 12px 25px;
@@ -116,7 +116,7 @@
 </style>
 <body>
     
-< navbar >
+<nav>
 <div class="navbar">
     <h1>SMA NEGERI 2 BABARSARI</h1>
     <td>
@@ -127,7 +127,7 @@
 </div>
 
     
-    <!section hero>
+    <!===komentar===>
     <section class="hero">
         <div class="hero-box">
             <h1>WELCOME</h1>
