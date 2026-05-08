@@ -1,12 +1,12 @@
 @font-face {
     font-family: "MyFont";
-    src: url('nice.otf');
+    src: url("nice.otf");
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: url('kelas.jpeg');
 }
 
