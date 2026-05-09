@@ -81,9 +81,57 @@
 </style>
 </head>
 <body>
-    <div class="form-box">
-        <form method="POST" action="inputnilai.php">
-            <label> label>
+    <div class="navbar">
+        <h2>SMA Negeri 2 Babarsari</h2>
+        <td>
+            <tr><a href="index.php">Beranda</a></tr>
+            <tr><a href="#">Data Siswa</a></tr>
+            <tr><a href="tambah.php">Tambah Siswa</a></tr>
+        </td>
+
+        </div>
+        <div class="form-box">
+<form method="POST" action="inputnilai.php">
+
+    <label>Nama</label>
+    <input type="text" name="nama" required>
+
+    <label>NISN/NIS</label>
+    <input type="text" name="nis" required>
+
+    <label>Kelas</label>
+    <input type="text" name="kelas" required>
+
+    <label>Jenis Kelamin</label>
+    <select name="jk" required>
+        <option value="">-- Pilih --</option>
+        <option value="L">Laki-laki</option>
+        <option value="P">Perempuan</option>
+    </select>
+
+    <!-- NILAI DIPISAH -->
+    <label>Pilihan Kelompok / Minat</label>
+    <select name="kelompok" required>
+        <option value="">-- Pilih Kelompok --</option>
+        <option value="Komputer">Komputer</option>
+        <option value="Peminatan ipa">Peminatan Ipa</option>
+        <option value="Peminatan ips">Peminatan ips</option>
+        <option value="Peminatan fisika">peminatan fisika</option>
+        <option value="Peminatan Biologi">Peminatan Biologi</option>
+        <option value="Peminatan matematika">Peminatan Matematika</option>
+    </select>
+    <label>Minat Tambahan</label>
+    <input type="text" name="tambahan" placeholder="Contoh: Informatika">
+
+    <label>Rumpun Minat</label>
+    <input type="text" name="minat" required>
+
+    <label>Jurusan Impian</label>
+    <input type="text" name="impian" required>
+    <a href="inputnilai.php">
+    <button type="submit">Proses Analisis</button>
+
+</form>
     </div>
 </body>
 </html>
