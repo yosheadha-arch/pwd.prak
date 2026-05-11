@@ -145,7 +145,6 @@
                 }
 
                 document.getElementById("semester").value = smt;
-
             }
         </script>
     </div>
