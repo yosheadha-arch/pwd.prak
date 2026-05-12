@@ -10,7 +10,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
     }
 
     body{
@@ -21,7 +21,7 @@
         justify-content: center;
         align-items: center;
     }
-//hai
+
     .container{
         background: rgba(255,255,255,0.9);
         padding: 30px;
