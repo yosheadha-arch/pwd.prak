@@ -70,11 +70,67 @@ else{
     <title>Hasil</title>
     <style>
         body {
-            
+            font-family: Poppins;
+            background: url('kelas.jpeg') center/cover no-repeat;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .box{
+            background: rgba(255,255,255,0.9);
+            padding:40px;
+            border-radius:15px;
+            width:400px;
+            text-align:center;
+        }
+
+        .rekom{
+            margin-top:20px;
+            padding:15px;
+            background:#3498db;
+            color:white;
+            border-radius:10px;
+        }
+
+        .btn-kembali{
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-kembali:hover{
+            background: #2980b9;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
-    
+    <div class="box">
+        <h2>Hasil Analisis</h2>
+
+        <p>IPA: <?=number_format($ipa,1)?></p>
+        <p>IPS: <?=number_format($ips,1)?></p>
+        <p>Komputer: <?=number_format($komputer,1)?></p>
+        <p>Bahasa: <?=number_format($bahasa,1)?></p>
+
+        <div class="rekom">
+            <b><?= $rekomendasi ?></b><br>
+            <?= $jurusan ?>
+        </div>
+
+        <div style="margin-top:20px;">
+            <a href="beranda.php" class="btn">Kembali ke Beranda</a>
+        </div>
+    </div>
 </body>
 </html>
