@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['login'])){
+    header("Location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -13,169 +21,8 @@
 <link rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<!-- GOOGLE FONT -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="style.css">
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-
-body{
-    background:#eef1f5;
-}
-
-/* ===== NAVBAR ===== */
-
-.navbar-custom{
-    width:100%;
-    background:#3563ff;
-    padding:18px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    color:white;
-    font-size:24px;
-    font-weight:600;
-}
-
-.menu{
-    display:flex;
-    gap:25px;
-}
-
-.menu a{
-    text-decoration:none;
-    color:white;
-    font-size:16px;
-    transition:0.3s;
-}
-
-.menu a:hover{
-    opacity:0.7;
-}
-
-/* ===== HEADER ===== */
-
-.header{
-    padding:50px;
-}
-
-.header h1{
-    font-size:40px;
-    font-weight:700;
-    color:#001b52;
-}
-
-.header p{
-    margin-top:10px;
-    color:#6c7a92;
-    font-size:18px;
-}
-
-/* ===== DASHBOARD ===== */
-
-.dashboard{
-    padding:0 50px 50px;
-}
-
-.dashboard-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-/* ===== CARD ===== */
-
-.card-link{
-    text-decoration:none;
-}
-
-.card-dashboard{
-    background:white;
-    border-radius:20px;
-    padding:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.card-dashboard:hover{
-    transform:translateY(-5px);
-}
-
-.card-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.card-top h2{
-    font-size:30px;
-    font-weight:600;
-    color:black;
-}
-
-.card-top i{
-    font-size:40px;
-    color:#3563ff;
-}
-
-.total{
-    margin-top:20px;
-    font-size:50px;
-    font-weight:700;
-    color:#001b52;
-}
-
-.desc{
-    margin-top:10px;
-    color:#6c7a92;
-    font-size:18px;
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media(max-width:992px){
-
-    .dashboard-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:768px){
-
-    .navbar-custom{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .menu{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .dashboard-grid{
-        grid-template-columns:1fr;
-    }
-
-    .header{
-        padding:30px;
-    }
-
-    .dashboard{
-        padding:0 30px 30px;
-    }
-
-}
 
 </style>
 </head>
