@@ -3,239 +3,359 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pemetaan Siswa</title>
 
-<!-- FONT -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
+<title>Dashboard Pemetaan Siswa</title>
+
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- BOOTSTRAP ICON -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#eef1f5;
 }
 
 /* ===== NAVBAR ===== */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: #1da1f2;
-    color: white;
+
+.navbar-custom{
+    width:100%;
+    background:#3563ff;
+    padding:18px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.navbar h1 {
-    font-family: "Poppins";
-    font-size: 22px;
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:600;
 }
 
-.navbar ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
+.menu{
+    display:flex;
+    gap:25px;
 }
 
-.navbar ul li {
-    cursor: pointer;
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    transition:0.3s;
 }
 
-/* ===== HERO ===== */
-.hero {
-    min-height: 100vh;
-    background: url('gambar1.jpg') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.menu a:hover{
+    opacity:0.7;
 }
 
-.hero-box {
-    background: rgba(255,255,255,0.85);
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
+/* ===== HEADER ===== */
+
+.header{
+    padding:50px;
 }
 
-.hero-box h1 {
-    font-size: 50px;
-    color: #1da1f2;
+.header h1{
+    font-size:40px;
+    font-weight:700;
+    color:#001b52;
 }
 
-.total {
-    margin: 20px 0;
-    background: #3498db;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 20px;
+.header p{
+    margin-top:10px;
+    color:#6c7a92;
+    font-size:18px;
 }
 
-.nilai {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin: 20px 0;
+/* ===== DASHBOARD ===== */
+
+.dashboard{
+    padding:0 50px 50px;
 }
 
-.nilai div {
-    padding: 10px;
-    color: white;
-    border-radius: 5px;
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.tinggi { background: green; }
-.sedang { background: orange; }
-.rendah { background: red; }
+/* ===== CARD ===== */
 
-.hero button {
-    padding: 12px 25px;
-    border: none;
-    background: #3498db;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
+.card-link{
+    text-decoration:none;
 }
 
-/* ===== PEMINATAN ===== */
-.section {
-    min-height:100vh;
-    padding: 60px;
-    background: url('gambar1.jpg') center/cover no-repeat;
+.card-dashboard{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
 }
 
-.overlay {
-    backdrop-filter: blur(6px);
+.card-dashboard:hover{
+    transform:translateY(-5px);
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.card {
-    background: #eee;
-    padding: 25px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.3s;
+.card-top h2{
+    font-size:30px;
+    font-weight:600;
+    color:black;
 }
 
-.card:hover {
-    transform: scale(1.05);
+.card-top i{
+    font-size:40px;
+    color:#3563ff;
 }
 
-.card button {
-    background: #3498db;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+.total{
+    margin-top:20px;
+    font-size:50px;
+    font-weight:700;
+    color:#001b52;
 }
 
-/* RESPONSIVE */
-@media(max-width: 768px){
-    .grid {
-        grid-template-columns: 1fr;
+.desc{
+    margin-top:10px;
+    color:#6c7a92;
+    font-size:18px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:992px){
+
+    .dashboard-grid{
+        grid-template-columns:repeat(2,1fr);
     }
-}
-</style>
 
+}
+
+@media(max-width:768px){
+
+    .navbar-custom{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+    .header{
+        padding:30px;
+    }
+
+    .dashboard{
+        padding:0 30px 30px;
+    }
+
+}
+
+</style>
 </head>
 <body>
 
 <!-- ===== NAVBAR ===== -->
-<div class="navbar">
-    <h1>SMA NEGERI 2 BABARSARI</h1>
-    <ul>
-        <li>Beranda</li>
-        <li>Data Siswa</li>
-        <li>Tambah Siswa</li>
-    </ul>
+
+<div class="navbar-custom">
+
+    <div class="logo">
+        SMA NEGERI 2 BABARSARI
+    </div>
+
+    <div class="menu">
+        <a href="index.php">Beranda</a>
+        <a href="datasiswa.php">Data Siswa</a>
+        <a href="tambah.php">Tambah Siswa</a>
+        <a href="logout.php">Logout</a>
+    </div>
+
 </div>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-    <div class="hero-box">
-        <h1>WELCOME</h1>
+<!-- ===== HEADER ===== -->
 
-        <div class="total">
-            TOTAL SISWA <br> 200 SISWA
-        </div>
+<div class="header">
 
-        <div class="nilai">
-            <div class="tinggi">85 - 100</div>
-            <div class="sedang">70 - 84</div>
-            <div class="rendah">< 70</div>
-        </div>
-            <a href="analisis.php">
-            <button>Mulai Input Data</button>
-            </a>
+    <h1>Dashboard Pemetaan Siswa</h1>
+    <p>Sistem pemetaan minat dan bakat siswa</p>
+
+</div>
+
+<!-- ===== DASHBOARD ===== -->
+
+<section class="dashboard">
+
+    <div class="dashboard-grid">
+
+        <!-- TOTAL SISWA -->
+        <a href="datasiswa.php" class="card-link">
+
+            <div class="card-dashboard">
+
+                <div class="card-top">
+                    <h2>Total Siswa</h2>
+                    <i class="bi bi-people-fill"></i>
+                </div>
+
+                <div class="total">200</div>
+
+                <div class="desc">
+                    Jumlah seluruh siswa
+                </div>
+
+            </div>
+
+        </a>
+
+        <!-- IPA -->
+        <a href="ipa.php" class="card-link">
+
+            <div class="card-dashboard">
+
+                <div class="card-top">
+                    <h2>Peminatan IPA</h2>
+                    <i class="bi bi-capsule-pill"></i>
+                </div>
+
+                <div class="total">50</div>
+
+                <div class="desc">
+                    Siswa peminatan IPA
+                </div>
+
+            </div>
+
+        </a>
+
+        <!-- IPS -->
+        <a href="ips.php" class="card-link">
+
+            <div class="card-dashboard">
+
+                <div class="card-top">
+                    <h2>Peminatan IPS</h2>
+                    <i class="bi bi-bank"></i>
+                </div>
+
+                <div class="total">40</div>
+
+                <div class="desc">
+                    Siswa peminatan IPS
+                </div>
+
+            </div>
+
+        </a>
+
+        <!-- KOMPUTER -->
+        <a href="komputer.php" class="card-link">
+
+            <div class="card-dashboard">
+
+                <div class="card-top">
+                    <h2>Komputer</h2>
+                    <i class="bi bi-pc-display"></i>
+                </div>
+
+                <div class="total">35</div>
+
+                <div class="desc">
+                    Siswa bidang komputer
+                </div>
+
+            </div>
+
+        </a>
+
+        <!-- BIOLOGI -->
+        <a href="biologi.php" class="card-link">
+
+            <div class="card-dashboard">
+
+                <div class="card-top">
+                    <h2>Peminatan Biologi</h2>
+                    <i class="bi bi-heart-pulse-fill"></i>
+                </div>
+
+                <div class="total">30</div>
+
+                <div class="desc">
+                    Siswa peminatan Biologi
+                </div>
+
+            </div>
+
+        </a>
+
+        <!-- FISIKA -->
+        <a href="fisika.php" class="card-link">
+
+            <div class="card-dashboard">
+
+                <div class="card-top">
+                    <h2>Peminatan Fisika</h2>
+                    <i class="bi bi-lightning-charge-fill"></i>
+                </div>
+
+                <div class="total">25</div>
+
+                <div class="desc">
+                    Siswa peminatan Fisika
+                </div>
+
+            </div>
+
+        </a>
+
+        <!-- MATEMATIKA -->
+        <a href="matematika.php" class="card-link">
+
+            <div class="card-dashboard">
+
+                <div class="card-top">
+                    <h2>Peminatan Matematika</h2>
+                    <i class="bi bi-calculator-fill"></i>
+                </div>
+
+                <div class="total">20</div>
+
+                <div class="desc">
+                    Siswa peminatan Matematika
+                </div>
+
+            </div>
+
+        </a>
+
     </div>
+
 </section>
-
-<!-- ===== PEMINATAN ===== -->
-<section class="section" id="peminatan">
-    <div class="overlay">
-        <div class="grid">
-
-            <div class="card">
-                <h3>Peminatan Komputer</h3>
-                <a href="komputer.php">
-                <button>Lihat detail</button>
-                </a>
-            </div>
-
-            <div class="card">
-                <h3>Peminatan IPA</h3>
-                <a href="ipa.php">
-                <button>Lihat detail</button>
-                </a>
-            </div>
-
-            <div class="card">
-                <h3>Peminatan IPS</h3>
-                <a href="ips.php">
-                <button>Lihat detail</button>
-                </a>
-            </div>
-
-            <div class="card">
-                <h3>Peminatan Fisika</h3>
-                <a href="fisika.php">
-                <button>Lihat detail</button>
-                </a>
-            </div>
-
-            <div class="card">
-                <h3>Peminatan Biologi</h3>
-                <a href="biologi.php">
-                <button>Lihat detail</button>
-                </a>
-            </div>
-
-            <div class="card">
-                <h3>Peminatan Matematika</h3>
-                <a href="matematika.php">
-                <button>Lihat detail</button>
-                </a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<script>
-function scrollDown() {
-    document.getElementById("peminatan").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-</script>
 
 </body>
 </html>
