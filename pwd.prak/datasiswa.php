@@ -190,12 +190,17 @@ tbody tr:hover{
 
         <h1>Data Siswa</h1>
 
+        <a href="index.php" class="btn-beranda">
+            <i class="bi bi-house-door-fill"></i> Beranda
+        </a>
+
         <a href="tambahsiswa.php" class="btn">
 
             <i class="bi bi-plus-circle"></i>
             Tambah Siswa
 
         </a>
+
 
     </div>
 

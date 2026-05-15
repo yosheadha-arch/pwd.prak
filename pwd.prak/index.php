@@ -98,6 +98,7 @@ $total_mtk = mysqli_fetch_assoc($query_mtk);
 <!-- BOOTSTRAP ICON -->
 <link rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
 
 <script>
 function toggleMenu(){
@@ -135,15 +136,19 @@ function toggleMenu(){
     </div>
 
     <!-- PROFILE DROPDOWN -->
-        <div class="profile" onclick="toggleMenu()">
-            <img src="profile.jpg">
-            <span>Admin</span>
-        </div>
+    <div class="profile-dropdown">
 
-        <div class="dropdown-menu" id="dropdownMenu">
+    <div class="profile" onclick="toggleMenu()">
+        <img src="profile.jpg">
+        <span>Admin</span>
+    </div>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="profile.php">Profile</a>
         <a href="logout.php">Logout</a>
-        </div>>
-        </div>
+    </div>
+
+</div>
 
 </div>
 
