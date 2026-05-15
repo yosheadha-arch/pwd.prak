@@ -15,91 +15,172 @@
 
     /*background*/
     body{
-        height: 100vh;
-        background: url('') center/cover no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        min-height: 100vh;
+        background:  linear-gradient(rgba(15,23,42,0.8), rgba(37,99,235,0.7)),
+        url('bg.jpg');
+        background-size: cover;
+        background-position:center;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:40px;
     }
 
     /*card*/ 
     .card {
-        background-attachment: rgba(255,255,255,0.95);
-        width: 70%;
-        padding: 40px;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-        position: relative;
+        width: 100%;
+        max-widht: 1100px;
+        background: rgba(255,255,255,0.95);
+        border-radius:25px;
+        padding:45px;
+        box-shadow:0 15px 35px rgba(0,0,0,0.25);
     }
 
-    /*icon*/
-    .card h1 {
-        font-size: 32px;
-        margin-bottom: 10px;
-    }
-    
-    .card p {
-        margin-bottom: 20px;
-        line-height: 1.6;
+    .header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    margin-bottom:30px;
+}
+
+.header i{
+    font-size:70px;
+    color:#2563eb;
+}
+
+.header h1{
+    font-size:42px;
+    color:#0f172a;
+}
+
+/* DESKRIPSI */
+
+.desc{
+    color:#475569;
+    line-height:1.9;
+    margin-bottom:40px;
+    font-size:16px;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+/* BOX */
+
+.box{
+    background:#f8fafc;
+    padding:30px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.box h2{
+    color:#0f172a;
+    margin-bottom:18px;
+    font-size:22px;
+}
+
+.box ul{
+    padding-left:20px;
+}
+
+.box li{
+    margin-bottom:12px;
+    color:#475569;
+    line-height:1.7;
+}
+
+.box p{
+    color:#475569;
+    line-height:1.8;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-top:40px;
+
+    padding:14px 24px;
+
+    background:#2563eb;
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .card{
+        padding:30px 20px;
     }
 
-    .card h2 {
-        margin-stop: 20px;
-        font-size: 22px;
+    .header{
+        flex-direction:column;
+        text-align:center;
     }
 
-    .card ul{
-            margin-left: 20px;
-            line-height: 1.7;
+    .header h1{
+        font-size:30px;
     }
 
-    /*button*/ 
-    .btn {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 10px 20px;
-        background: #3498db;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        cursor: pointer;
+    .grid{
+        grid-template-columns:1fr;
     }
+}
 
-    .btn {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 10px 20px;
-        background: #3498db;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-
-    .btn:hover {
-        background: #2980b9;
-    }
-
-    /*rsponsive*/
-    @media(max-width: 768px) {
-        .card {
-            width: 90%;
-            padding: 20px;
-        }
-    }
 </style>
-</head>
-<body>
-    <div class="card">
-        <div class="header">
-            <i class="bi bi-bank2"></i>
-            <h1>
-                    Peminatan Pengetahuan Sosial (IPS)
-            </h1>
-        </div>
 
-        <p class="desc">
-            Peminatan IPS berfokus pada ilmu sosial,
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <i class="bi bi-bank2"></i>
+
+        <h1>
+            Peminatan Pengetahuan Sosial (IPS)
+        </h1>
+
+    </div>
+
+    <!-- DESKRIPSI -->
+
+    <p class="desc">
+
+        Peminatan IPS berfokus pada ilmu sosial,
         ekonomi, geografi, sejarah, dan interaksi manusia
         dalam kehidupan bermasyarakat.
 
@@ -107,40 +188,73 @@
         analisis sosial, kepemimpinan, serta minat
         dalam bidang bisnis dan hubungan sosial.
 
-        </p>
+    </p>
 
-        <div class="grid">
-            <div class="box">
-                <h2>
-                    <i class="bi bi-book-fill"></i>
-                    Mata Pelajaran Pendukung
-                </h2>
+    <!-- GRID -->
 
-                <ul>
-                    <li>Ekonomi</li>
-                    <li>Geografi</li>
-                    <li>Sosiologi</li>
-                    <li>Sejarah</li>
-                </ul>
-            </div>
+    <div class="grid">
 
-            <div class="box">
-                <h2>
-                    <i class="bi bi-mortarboard-fill"></i>
-                    Rekomendasi Jurusan
-                </h2>
+        <!-- MAPEL -->
 
-                <p>
-                    Manajemen,
-                    Akuntansi,
-                    Ilmu Komunikasi,
-                    Hubungan Internasional,
-                    Hukum,
-                    Administrasi Bisnis
-                </p>
-            </div>
+        <div class="box">
 
-            <div class="box">
+            <h2>
+                <i class="bi bi-book-fill"></i>
+                Mata Pelajaran Pendukung
+            </h2>
+
+            <ul>
+                <li>Ekonomi</li>
+                <li>Geografi</li>
+                <li>Sosiologi</li>
+                <li>Sejarah</li>
+            </ul>
+
+        </div>
+
+        <!-- INDIKATOR -->
+
+        <div class="box">
+
+            <h2>
+                <i class="bi bi-bar-chart-fill"></i>
+                Indikator Kesesuaian
+            </h2>
+
+            <ul>
+                <li>Ekonomi ≥ 80</li>
+                <li>Geografi ≥ 75</li>
+                <li>Sosiologi ≥ 75</li>
+                <li>Komunikasi dan analisis baik</li>
+            </ul>
+
+        </div>
+
+        <!-- JURUSAN -->
+
+        <div class="box">
+
+            <h2>
+                <i class="bi bi-mortarboard-fill"></i>
+                Rekomendasi Jurusan
+            </h2>
+
+            <p>
+
+                Manajemen,
+                Akuntansi,
+                Ilmu Komunikasi,
+                Hubungan Internasional,
+                Hukum,
+                Administrasi Bisnis
+
+            </p>
+
+        </div>
+
+        <!-- KARIER -->
+
+        <div class="box">
 
             <h2>
                 <i class="bi bi-briefcase-fill"></i>
@@ -159,18 +273,21 @@
 
             </p>
 
-            </div>
-
         </div>
 
-        <a href="index.php" class="btn">
+    </div>
+
+    <!-- BUTTON -->
+
+    <a href="index.php" class="btn">
 
         <i class="bi bi-arrow-left-circle-fill"></i>
 
         Kembali ke Dashboard
 
-        </a>
+    </a>
 
-    </div>
+</div>
+
 </body>
 </html>

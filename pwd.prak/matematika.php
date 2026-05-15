@@ -291,7 +291,7 @@ body{
 
         <i class="bi bi-arrow-left-circle-fill"></i>
 
-        Kembali ke Dashboard
+        ← Kembali ke Dashboard
 
     </a>
 

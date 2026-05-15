@@ -455,6 +455,7 @@ function toggleMenu(){
     </div>
 
 </footer>
+<<<<<<< HEAD
 </footer>
 <script>
 function toggleMenu(){
@@ -467,5 +468,7 @@ function toggleMenu(){
     }
 }
 </script>
+=======
+>>>>>>> 84d6cf88d58d3a728aa532bebd1060b95c468988
 </body>
 </html>
