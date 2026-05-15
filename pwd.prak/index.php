@@ -639,6 +639,5 @@ body{
     </div>
 
 </footer>
-<!hai!>
 </body>
 </html>
