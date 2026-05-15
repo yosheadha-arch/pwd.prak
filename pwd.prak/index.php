@@ -468,7 +468,7 @@ body{
                 </div>
 
                 <div class="desc">
-                    Siswa peminatan Biologi
+                    Siswa peminatan BiologiII
                 </div>
 
             </div>
