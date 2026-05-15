@@ -153,7 +153,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
                 <div class="total">30</div>
 
                 <div class="desc">
-                    Siswa peminatan Biologi
+                    Siswa peminatan BiologiII
                 </div>
 
             </div>
