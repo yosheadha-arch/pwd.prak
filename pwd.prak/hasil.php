@@ -129,7 +129,7 @@ else{
         </div>
 
         <div style="margin-top:20px;">
-            <a href="beranda.php" class="btn">Kembali ke Beranda</a>
+            <a href="index.php" class="btn-btn-primary;" >Kembali ke Beranda</a>
         </div>
     </div>
 </body>

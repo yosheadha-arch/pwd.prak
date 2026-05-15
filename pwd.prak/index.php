@@ -99,403 +99,19 @@ $total_mtk = mysqli_fetch_assoc($query_mtk);
 <link rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-
-body{
-    background:#f1f5f9;
-}
-
-/* LOGO + JUDUL */
-.logo-brand{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-brand img{
-    width: 55px;
-    height: 55px;
-    object-fit: cover;
-}
-
-.logo-brand h1{
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0;
-}
-
-/* ===== NAVBAR ===== */
-
-.navbar-custom{
-    width:100%;
-
-    background:#2563eb;
-
-    padding:20px 50px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    color:white;
-
-    font-size:32px;
-    font-weight:700;
-}
-
-.menu{
-    display:flex;
-    gap:30px;
-}
-
-.menu a{
-    color:white;
-
-    text-decoration:none;
-
-    font-size:18px;
-    font-weight:500;
-}
-
-/* ===== HEADER ===== */
-
-.header{
-    padding:50px;
-}
-
-.header h1{
-    font-size:55px;
-    font-weight:700;
-
-    color:#0f172a;
-
-    margin-bottom:10px;
-}
-
-.header p{
-    font-size:22px;
-
-    color:#64748b;
-}
-
-/* ===== DASHBOARD ===== */
-
-.dashboard{
-    padding:0 50px 50px;
-}
-
-.dashboard-grid{
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(300px,1fr));
-
-    gap:30px;
-}
-
-.card-link{
-    text-decoration:none;
-}
-
-.card-dashboard{
-    background:white;
-
-    border-radius:25px;
-
-    padding:35px;
-
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-
-    transition:0.3s;
-}
-
-.card-dashboard:hover{
-    transform:translateY(-5px);
-}
-
-.card-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    margin-bottom:25px;
-}
-
-.card-top h2{
-    color:#0f172a;
-
-    font-size:35px;
-    font-weight:700;
-}
-
-.card-top i{
-    font-size:45px;
-
-    color:#2563eb;
-}
-
-.total{
-    font-size:70px;
-    font-weight:700;
-
-    color:#0f172a;
-
-    margin-bottom:15px;
-}
-
-.desc{
-    color:#64748b;
-
-    font-size:20px;
-}
-
-/* ===== BIODATA SEKOLAH ===== */
-
-.biodata-sekolah{
-    padding:0 50px 50px;
-}
-
-.biodata-card{
-    background:white;
-
-    border-radius:25px;
-
-    padding:40px;
-
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.biodata-card h2{
-    font-size:40px;
-    font-weight:700;
-
-    color:#0f172a;
-
-    margin-bottom:40px;
-
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.biodata-grid{
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(250px,1fr));
-
-    gap:25px;
-}
-
-.biodata-item{
-    background:#f8fafc;
-
-    padding:25px;
-
-    border-radius:20px;
-
-    border-left:6px solid #2563eb;
-}
-
-.biodata-item span{
-    display:block;
-
-    color:#64748b;
-
-    font-size:15px;
-
-    margin-bottom:10px;
-}
-
-.biodata-item p{
-    margin:0;
-
-    color:#0f172a;
-
-    font-size:22px;
-    font-weight:600;
-}
-/* FOOTER */
-.footer{
-    background: #004b93;
-    color: white;
-    margin-top: 50px;
-    font-family: Arial, sans-serif;
-}
-
-/* CONTAINER */
-.footer-container{
-    width: 90%;
-    margin: auto;
-    padding: 40px 0;
-}
-
-/* BOX */
-.footer-box{
-    margin-bottom: 40px;
-}
-
-.footer-box h2{
-    font-size: 34px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* GARIS */
-.line{
-    width: 100%;
-    height: 3px;
-    background: white;
-    position: relative;
-    margin-bottom: 25px;
-}
-
-.line::after{
-    content: "";
-    width: 35%;
-    height: 3px;
-    background: gold;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-/* DESKRIPSI */
-.footer-desc{
-    font-size: 24px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-/* INFO */
-.footer-info{
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.footer-info i{
-    font-size: 28px;
-    margin-top: 5px;
-}
-
-.footer-info h5{
-    font-size: 26px;
-    margin-bottom: 5px;
-}
-
-.footer-info p{
-    font-size: 23px;
-    line-height: 1.6;
-}
-
-/* TAGS */
-.tags{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.tags span{
-    border: 2px solid white;
-    padding: 12px 20px;
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-.tags span:hover{
-    background: white;
-    color: #004b93;
-}
-
-/* SOSMED */
-.social-icons{
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.social-icons a{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 30px;
-    text-decoration: none;
-}
-
-.facebook{
-    background: #3b5998;
-}
-
-.instagram{
-    background: #f4b400;
-}
-
-.youtube{
-    background: #ff4d00;
-}
-
-/* COPYRIGHT */
-.copyright{
-    background: #0066cc;
-    text-align: center;
-    padding: 20px;
-    font-size: 20px;
-    border-top: 1px solid rgba(255,255,255,0.3);
-}
-
-/* RESPONSIVE HP */
-@media(max-width:768px){
-
-    .footer-box h2{
-        font-size: 28px;
+<script>
+function toggleMenu(){
+    let menu = document.getElementById("dropdownMenu");
+
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
     }
-
-    .footer-desc{
-        font-size: 20px;
-    }
-
-    .footer-info h5{
-        font-size: 22px;
-    }
-
-    .footer-info p{
-        font-size: 18px;
-    }
-
-    .tags span{
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-
-    .social-icons a{
-        width: 60px;
-        height: 60px;
-        font-size: 25px;
-    }
-
-    .copyright{
-        font-size: 16px;
-    }
-
 }
+</script>
 
-</style>
+</styl>
 </head>
 <body>
 
@@ -517,6 +133,17 @@ body{
         <a href="tambah.php">Tambah Siswa</a>
         <a href="logout.php">Logout</a>
     </div>
+
+    <!-- PROFILE DROPDOWN -->
+        <div class="profile" onclick="toggleMenu()">
+            <img src="profile.jpg">
+            <span>Admin</span>
+        </div>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+        <a href="logout.php">Logout</a>
+        </div>>
+        </div>
 
 </div>
 
@@ -824,6 +451,16 @@ body{
 
 </footer>
 </footer>
+<script>
+function toggleMenu(){
+    let menu = document.getElementById("dropdownMenu");
 
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+</script>
 </body>
 </html>
