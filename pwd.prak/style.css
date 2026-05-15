@@ -178,4 +178,73 @@ body{
     box-shadow:0 10px 30px rgba(0,0,0,0.2);
     }
 
+    /* ===== BIODATA SEKOLAH ===== */
+
+.biodata-sekolah{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+
+    padding:50px 20px;
+}
+
+.biodata-card{
+    width:100%;
+    max-width:1200px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.biodata-card h2{
+    font-size:40px;
+    font-weight:700;
+
+    margin-bottom:35px;
+
+    color:#0f172a;
+}
+
+.biodata-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.biodata-item{
+    background:#f8fafc;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    border-left:5px solid #2563eb;
+}
+
+.biodata-item span{
+    display:block;
+
+    font-size:15px;
+    color:#64748b;
+
+    margin-bottom:10px;
+}
+
+.biodata-item p{
+    font-size:20px;
+    font-weight:600;
+
+    color:#0f172a;
+}
+
+
 }
