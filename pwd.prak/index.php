@@ -1,11 +1,88 @@
 <?php
 session_start();
+include 'koneksi.php';
 
 if(!isset($_SESSION['login'])){
     header("Location: login.php");
     exit;
 }
+
+/* TOTAL SISWA */
+$query_total = mysqli_query(
+    $konek,
+    "SELECT COUNT(*) as total FROM siswa"
+);
+
+$total_siswa = mysqli_fetch_assoc($query_total);
+
+
+/* TOTAL IPA */
+$query_ipa = mysqli_query(
+    $konek,
+    "SELECT COUNT(*) as total 
+    FROM siswa 
+    WHERE hasil_peminatan='IPA'"
+);
+
+$total_ipa = mysqli_fetch_assoc($query_ipa);
+
+
+/* TOTAL IPS */
+$query_ips = mysqli_query(
+    $konek,
+    "SELECT COUNT(*) as total 
+    FROM siswa 
+    WHERE hasil_peminatan='IPS'"
+);
+
+$total_ips = mysqli_fetch_assoc($query_ips);
+
+
+/* TOTAL KOMPUTER */
+$query_komputer = mysqli_query(
+    $konek,
+    "SELECT COUNT(*) as total 
+    FROM siswa 
+    WHERE hasil_peminatan='Komputer'"
+);
+
+$total_komputer = mysqli_fetch_assoc($query_komputer);
+
+
+/* TOTAL BIOLOGI */
+$query_bio = mysqli_query(
+    $konek,
+    "SELECT COUNT(*) as total 
+    FROM siswa 
+    WHERE hasil_peminatan='Biologi'"
+);
+
+$total_bio = mysqli_fetch_assoc($query_bio);
+
+
+/* TOTAL FISIKA */
+$query_fisika = mysqli_query(
+    $konek,
+    "SELECT COUNT(*) as total 
+    FROM siswa 
+    WHERE hasil_peminatan='Fisika'"
+);
+
+$total_fisika = mysqli_fetch_assoc($query_fisika);
+
+
+/* TOTAL MATEMATIKA */
+$query_mtk = mysqli_query(
+    $konek,
+    "SELECT COUNT(*) as total 
+    FROM siswa 
+    WHERE hasil_peminatan='Matematika'"
+);
+
+$total_mtk = mysqli_fetch_assoc($query_mtk);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,17 +91,13 @@ if(!isset($_SESSION['login'])){
 
 <title>Dashboard Pemetaan Siswa</title>
 
-<!-- BOOTSTRAP -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- BOOTSTRAP ICON -->
 <link rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <link rel="stylesheet" href="style.css">
-<style>
 
-</style>
 </head>
 <body>
 
@@ -70,7 +143,9 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
                     <i class="bi bi-people-fill"></i>
                 </div>
 
-                <div class="total">200</div>
+                <div class="total">
+                    <?= $total_siswa['total']; ?>
+                </div>
 
                 <div class="desc">
                     Jumlah seluruh siswa
@@ -90,7 +165,9 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
                     <i class="bi bi-capsule-pill"></i>
                 </div>
 
-                <div class="total">50</div>
+                <div class="total">
+                    <?= $total_ipa['total']; ?>
+                </div>
 
                 <div class="desc">
                     Siswa peminatan IPA
@@ -110,7 +187,9 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
                     <i class="bi bi-bank"></i>
                 </div>
 
-                <div class="total">40</div>
+                <div class="total">
+                    <?= $total_ips['total']; ?>
+                </div>
 
                 <div class="desc">
                     Siswa peminatan IPS
@@ -130,7 +209,9 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
                     <i class="bi bi-pc-display"></i>
                 </div>
 
-                <div class="total">35</div>
+                <div class="total">
+                    <?= $total_komputer['total']; ?>
+                </div>
 
                 <div class="desc">
                     Siswa bidang komputer
@@ -150,7 +231,9 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
                     <i class="bi bi-heart-pulse-fill"></i>
                 </div>
 
-                <div class="total">30</div>
+                <div class="total">
+                    <?= $total_bio['total']; ?>
+                </div>
 
                 <div class="desc">
                     Siswa peminatan Biologi
@@ -170,7 +253,9 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
                     <i class="bi bi-lightning-charge-fill"></i>
                 </div>
 
-                <div class="total">25</div>
+                <div class="total">
+                    <?= $total_fisika['total']; ?>
+                </div>
 
                 <div class="desc">
                     Siswa peminatan Fisika
@@ -190,7 +275,9 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
                     <i class="bi bi-calculator-fill"></i>
                 </div>
 
-                <div class="total">20</div>
+                <div class="total">
+                    <?= $total_mtk['total']; ?>
+                </div>
 
                 <div class="desc">
                     Siswa peminatan Matematika
@@ -203,6 +290,58 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
     </div>
 
 </section>
+</section>
 
+<!-- ===== BIODATA SEKOLAH ===== -->
+
+<section class="biodata-sekolah">
+
+    <div class="biodata-card">
+
+        <h2>
+            <i class="bi bi-building"></i>
+            Biodata Sekolah
+        </h2>
+
+        <div class="biodata-grid">
+
+            <div class="biodata-item">
+                <span>Nama Sekolah</span>
+                <p>SMA Negeri 2 Babarsari</p>
+            </div>
+
+            <div class="biodata-item">
+                <span>NPSN</span>
+                <p>12345678</p>
+            </div>
+
+            <div class="biodata-item">
+                <span>Alamat</span>
+                <p>Jl. Babarsari No. 10 Yogyakarta</p>
+            </div>
+
+            <div class="biodata-item">
+                <span>Kepala Sekolah</span>
+                <p>Drs. Budi Santoso</p>
+            </div>
+
+            <div class="biodata-item">
+                <span>Email</span>
+                <p>sman2babarsari@gmail.com</p>
+            </div>
+
+            <div class="biodata-item">
+                <span>Telepon</span>
+                <p>0812-3456-7890</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
 </body>
 </html>
