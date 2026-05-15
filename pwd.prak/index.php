@@ -112,6 +112,26 @@ body{
     background:#f1f5f9;
 }
 
+/* LOGO + JUDUL */
+.logo-brand{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-brand img{
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+}
+
+.logo-brand h1{
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
 /* ===== NAVBAR ===== */
 
 .navbar-custom{
@@ -305,6 +325,175 @@ body{
     font-size:22px;
     font-weight:600;
 }
+/* FOOTER */
+.footer{
+    background: #004b93;
+    color: white;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+/* CONTAINER */
+.footer-container{
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* BOX */
+.footer-box{
+    margin-bottom: 40px;
+}
+
+.footer-box h2{
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* GARIS */
+.line{
+    width: 100%;
+    height: 3px;
+    background: white;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.line::after{
+    content: "";
+    width: 35%;
+    height: 3px;
+    background: gold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* DESKRIPSI */
+.footer-desc{
+    font-size: 24px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* INFO */
+.footer-info{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.footer-info i{
+    font-size: 28px;
+    margin-top: 5px;
+}
+
+.footer-info h5{
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.footer-info p{
+    font-size: 23px;
+    line-height: 1.6;
+}
+
+/* TAGS */
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tags span{
+    border: 2px solid white;
+    padding: 12px 20px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.tags span:hover{
+    background: white;
+    color: #004b93;
+}
+
+/* SOSMED */
+.social-icons{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icons a{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.facebook{
+    background: #3b5998;
+}
+
+.instagram{
+    background: #f4b400;
+}
+
+.youtube{
+    background: #ff4d00;
+}
+
+/* COPYRIGHT */
+.copyright{
+    background: #0066cc;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+/* RESPONSIVE HP */
+@media(max-width:768px){
+
+    .footer-box h2{
+        font-size: 28px;
+    }
+
+    .footer-desc{
+        font-size: 20px;
+    }
+
+    .footer-info h5{
+        font-size: 22px;
+    }
+
+    .footer-info p{
+        font-size: 18px;
+    }
+
+    .tags span{
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .social-icons a{
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .copyright{
+        font-size: 16px;
+    }
+
+}
 
 </style>
 </head>
@@ -314,8 +503,12 @@ body{
 
 <div class="navbar-custom">
 
-    <div class="logo">
-        SMA NEGERI 2 BABARSARI
+    <div class="logo-brand">
+    
+    <img src="logosekolah.png">
+
+    <h1>SMA NEGERI 2 BABARSARI</h1>
+
     </div>
 
     <div class="menu">
@@ -538,11 +731,9 @@ body{
     <div class="footer-container">
 
         <!-- HUBUNGI KAMI -->
-
         <div class="footer-box">
 
             <h2>Hubungi Kami</h2>
-
             <div class="line"></div>
 
             <p class="footer-desc">
@@ -580,11 +771,9 @@ body{
         </div>
 
         <!-- TAGS -->
-
         <div class="footer-box">
 
             <h2>Tags</h2>
-
             <div class="line"></div>
 
             <div class="tags">
@@ -602,25 +791,23 @@ body{
 
         </div>
 
-        <!-- SOSMED -->
-
+        <!-- IKUTI KAMI -->
         <div class="footer-box">
 
             <h2>Ikuti Kami</h2>
-
             <div class="line"></div>
 
             <div class="social-icons">
 
-                <a href="#">
+                <a href="#" class="facebook">
                     <i class="bi bi-facebook"></i>
                 </a>
 
-                <a href="#">
+                <a href="#" class="instagram">
                     <i class="bi bi-instagram"></i>
                 </a>
 
-                <a href="#">
+                <a href="#" class="youtube">
                     <i class="bi bi-youtube"></i>
                 </a>
 
@@ -631,13 +818,11 @@ body{
     </div>
 
     <!-- COPYRIGHT -->
-
     <div class="copyright">
-
         Copyright © 2026 SMA Negeri 2 Babarsari
-
     </div>
 
+</footer>
 </footer>
 
 </body>
