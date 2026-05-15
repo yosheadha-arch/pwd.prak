@@ -1,3 +1,95 @@
+<?php
+
+include 'koneksi.php';
+
+$nama = $_POST['nama'];
+$nis = $_POST['nis'];
+$kelas = $_POST['kelas'];
+$jk = $_POST['jk'];
+$kelompok = $_POST['kelompok'];
+
+$minat = $_POST['minat'];
+$rumpun = $_POST['rumpun'];
+$jurusan = $_POST['jurusan'];
+
+$fisika = $_POST['fisika'];
+$matematika = $_POST['matematika'];
+$biologi = $_POST['biologi'];
+$ekonomi = $_POST['ekonomi'];
+$geografi = $_POST['geografi'];
+$informatika = $_POST['informatika'];
+$binggris = $_POST['binggris'];
+$bindo = $_POST['bindo'];
+$kimia = $_POST['kimia'];
+
+$query = mysqli_query($konek,
+
+"INSERT INTO siswa
+(
+    nama,
+    nisn,
+    kelas,
+    jenis_kelamin,
+    hasil_peminatan,
+    minat,
+    rumpun,
+    jurusan,
+
+    fisika,
+    matematika,
+    biologi,
+    ekonomi,
+    geografi,
+    informatika,
+    binggris,
+    bindo,
+    kimia
+)
+
+VALUES
+(
+    '$nama',
+    '$nis',
+    '$kelas',
+    '$jk',
+    '$kelompok',
+    '$minat',
+    '$rumpun',
+    '$jurusan',
+
+    '$fisika',
+    '$matematika',
+    '$biologi',
+    '$ekonomi',
+    '$geografi',
+    '$informatika',
+    '$binggris',
+    '$bindo',
+    '$kimia'
+)"
+
+);
+
+if($query){
+
+    echo "
+    <script>
+        alert('Data berhasil disimpan');
+        window.location='datasiswa.php';
+    </script>
+    ";
+
+}else{
+
+    echo "
+    <script>
+        alert('Data gagal disimpan');
+    </script>
+    ";
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
