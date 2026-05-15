@@ -236,7 +236,6 @@ body{
         <i class="bi bi-person-plus-fill"></i>
 
         <h1>Tambah Data Siswa</h1>
-        <form action="proses_tambah.php" method="POST">
 
     </div>
 
