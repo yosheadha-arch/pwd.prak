@@ -41,9 +41,20 @@ if($cek > 0){
         body{
             height:100vh;
             display:flex;
-            justify-content:center;
-            align-items:center;
-            background:linear-gradient(135deg,#2563eb,#1e293b);
+    justify-content:center;
+    align-items:center;
+    gap:80px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)),
+    url('bg.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    font-family:'Poppins',sans-serif;
         }
 
         .login-box{
@@ -92,6 +103,16 @@ if($cek > 0){
     </style>
 </head>
 <body>
+
+    <div class="login-image">
+    <img src="kelas.jpeg" alt="">
+    </div>
+
+    <div class="welcome-text">
+    <h1>Selamat Datang</h1>
+    <p>Sistem Pemetaan Minat dan Bakat Siswa</p>
+    </div>
+
     <div class="login-box">
 
     <h2>LOGIN ADMIN</h2>

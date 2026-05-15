@@ -154,4 +154,28 @@ body{
         padding:0 30px 30px;
     }
 
+    .welcome-text{
+    color:white;
+    max-width:500px;
+    }
+
+    .welcome-text h1{
+    font-size:55px;
+    margin-bottom:10px;
+    font-weight:700;
+    }
+
+    .welcome-text p{
+    font-size:20px;
+    opacity:0.9;
+    }
+
+    .login-box{
+    width:380px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
+
 }
