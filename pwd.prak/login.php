@@ -17,11 +17,15 @@ if($cek > 0){
 
     header("Location:index.php");
     exit;
+
 } else {
+
     $error = "Username atau Password Salah";
 }
+
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,7 +75,7 @@ if($cek > 0){
             color:#0f172a;
         }
 
-         input{
+        input{
             width:100%;
             padding:14px;
             margin-bottom:20px;
