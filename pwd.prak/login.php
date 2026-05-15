@@ -9,7 +9,7 @@ if(isset($_POST['login'])){
 
     $query = mysqli_query(
         $konek,
-        "SELECT * FROM admin 
+        "SELECT * FROM userr 
         WHERE username='$username' 
         AND password='$password'"
     );

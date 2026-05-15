@@ -371,12 +371,13 @@ body{
 
         <!-- BUTTON -->
 
-        <button type="submit" class="btn">
+        <form action="inputnilai.php" method="POST">
 
-            <i class="bi bi-graph-up-arrow"></i>
-             <form action="inputnilai.php" method="POST">
-            Proses Analisis
-        </button>
+        semua input disini
+
+    <button type="submit" class="btn">
+        Proses Analisis
+    </button>
 
     </form>
 
