@@ -91,35 +91,86 @@
 </head>
 <body>
     <div class="card">
+        <div class="header">
+            <i class="bi bi-bank2"></i>
+            <h1>
+                    Peminatan Pengetahuan Sosial (IPS)
+            </h1>
+        </div>
 
-    <div class="icon">👥</div>
+        <p class="desc">
+            Peminatan IPS berfokus pada ilmu sosial,
+        ekonomi, geografi, sejarah, dan interaksi manusia
+        dalam kehidupan bermasyarakat.
 
-    <h1>Peminatan Pengetahuan Sosial (IPS)</h1>
+        Cocok bagi siswa yang memiliki kemampuan komunikasi,
+        analisis sosial, kepemimpinan, serta minat
+        dalam bidang bisnis dan hubungan sosial.
 
-    <p>
-    Fokus pada dinamika sosial, ekonomi, dan interaksi manusia.
-    Cocok bagi siswa yang memiliki kemampuan komunikasi dan analisis sosial.
-    </p>
+        </p>
 
-    <h2>Mata Pelajaran Pendukung:</h2>
-    <td>
-        <tr>Ekonomi</tr>
-        <tr>Geografi</tr>
-        <tr>Sosiologi</tr>
-    </td>
-    <h2>Indikator Kesesuaian:</h2>
-    <td>
-        <tr>Ekonomi >= 80</tr>
-        <tr>Geografi >= 75</tr>
-        <tr>Sosiologi >= 75</tr>
-    </td>
-    <h2>Rekomendasi Jurusan:</h2>
-    <p>Manajemen, Akuntansi, Ilmu Komunikasi, Hukum</p>
+        <div class="grid">
+            <div class="box">
+                <h2>
+                    <i class="bi bi-book-fill"></i>
+                    Mata Pelajaran Pendukung
+                </h2>
 
-    <h2>Prospek Karier:</h2>
-    <p>Pengusaha, Konsultan, Diplomat, Content Strategist</p>
+                <ul>
+                    <li>Ekonomi</li>
+                    <li>Geografi</li>
+                    <li>Sosiologi</li>
+                    <li>Sejarah</li>
+                </ul>
+            </div>
 
-    <a href="beranda.php" class="btn">Kembali</a>
-</div>
+            <div class="box">
+                <h2>
+                    <i class="bi bi-mortarboard-fill"></i>
+                    Rekomendasi Jurusan
+                </h2>
+
+                <p>
+                    Manajemen,
+                    Akuntansi,
+                    Ilmu Komunikasi,
+                    Hubungan Internasional,
+                    Hukum,
+                    Administrasi Bisnis
+                </p>
+            </div>
+
+            <div class="box">
+
+            <h2>
+                <i class="bi bi-briefcase-fill"></i>
+                Prospek Karier
+            </h2>
+
+            <p>
+
+                Pengusaha,
+                Konsultan,
+                Diplomat,
+                Content Strategist,
+                Marketing,
+                HRD,
+                Pegawai Pemerintahan
+
+            </p>
+
+            </div>
+
+        </div>
+
+        <a href="index.php" class="btn">
+
+        <i class="bi bi-arrow-left-circle-fill"></i>
+
+        Kembali ke Dashboard
+
+        </a>
+
+    </div>
 </body>
 </html>
