@@ -116,10 +116,33 @@ function toggleMenu(){
     }
 }
 </script>
-
-</styl>
 </head>
 <body>
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+    <div class="topbar-left">
+
+        <span>
+            <i class="bi bi-geo-alt-fill"></i>
+            Jln Babarsari No. 10 Yogyakarta
+        </span>
+
+        <span>
+            <i class="bi bi-telephone-fill"></i>
+            08123456789
+        </span>
+
+        <span>
+            <i class="bi bi-envelope-fill"></i>
+            sman2babarsari@gmail.com
+        </span>
+
+    </div>
+
+</div>
 
 <!-- ===== NAVBAR ===== -->
 
@@ -127,9 +150,9 @@ function toggleMenu(){
 
     <div class="logo-brand">
     
-    <img src="logosekolah.png">
+        <img src="logosekolah.png">
 
-    <h1>SMA NEGERI 2 BABARSARI</h1>
+        <h1>SMA NEGERI 2 BABARSARI</h1>
 
     </div>
 
@@ -143,19 +166,35 @@ function toggleMenu(){
     <!-- PROFILE DROPDOWN -->
     <div class="profile-dropdown">
 
-    <div class="profile" onclick="toggleMenu()">
-        <img src="profile.jpg">
-        <span>Admin</span>
-    </div>
+        <div class="profile" onclick="toggleMenu()">
+            <img src="profile.jpg">
+            <span>Admin</span>
+        </div>
 
-    <div class="dropdown-menu" id="dropdownMenu">
-        <a href="profile.php">Profile</a>
-        <a href="logout.php">Logout</a>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="profile.php">Profile</a>
+            <a href="logout.php">Logout</a>
+        </div>
+
     </div>
 
 </div>
 
-</div>
+<!-- HERO -->
+<section class="hero" style="background-image: url('sekolah.png'); background-size: cover; background-position: bottom center; background-repeat: no-repeat; min-height: 80vh;">
+
+    <div class="hero-overlay">
+
+        <div class="hero-content">
+
+            
+        
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- ===== HEADER ===== -->
 
@@ -221,7 +260,7 @@ function toggleMenu(){
                 </div>
 
                 <div class="desc">
-                    Siswa peminatan IPA
+                    Siswa Peminatan IPA
                 </div>
 
             </div>
@@ -247,7 +286,7 @@ function toggleMenu(){
                 </div>
 
                 <div class="desc">
-                    Siswa peminatan IPS
+                    Siswa Peminatan IPS
                 </div>
 
             </div>
@@ -273,7 +312,7 @@ function toggleMenu(){
                 </div>
 
                 <div class="desc">
-                    Siswa bidang komputer
+                    Siswa Bidang Komputer
                 </div>
 
             </div>
@@ -299,7 +338,7 @@ function toggleMenu(){
                 </div>
 
                 <div class="desc">
-                    Siswa peminatan BiologiII
+                    Siswa Peminatan Biologi
                 </div>
 
             </div>
@@ -325,7 +364,7 @@ function toggleMenu(){
                 </div>
 
                 <div class="desc">
-                    Siswa peminatan Fisika
+                    Siswa Peminatan Fisika
                 </div>
 
             </div>
@@ -351,7 +390,7 @@ function toggleMenu(){
                 </div>
 
                 <div class="desc">
-                    Siswa peminatan Matematika
+                    Siswa Peminatan Matematika
                 </div>
 
             </div>
@@ -461,8 +500,6 @@ function toggleMenu(){
     </div>
 
 </footer>
-<<<<<<< HEAD
-</footer>
 <script>
 function toggleMenu(){
     let menu = document.getElementById("dropdownMenu");
@@ -474,7 +511,5 @@ function toggleMenu(){
     }
 }
 </script>
-=======
->>>>>>> 84d6cf88d58d3a728aa532bebd1060b95c468988
 </body>
 </html>

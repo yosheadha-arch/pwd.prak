@@ -244,8 +244,8 @@ while($data = mysqli_fetch_array($query)){
 <td><?= $data['geografi_sem1']; ?></td>
 <td><?= $data['geografi_sem2']; ?></td>
 
-<td><?= $data['sosiologi_sem1']; ?></td>
-<td><?= $data['sosiologi_sem2']; ?></td>
+<td><?= $data['sosio_sem1']; ?></td>
+<td><?= $data['sosio_sem2']; ?></td>
 
 <td><?= $data['bindo_sem1']; ?></td>
 <td><?= $data['bindo_sem2']; ?></td>
