@@ -413,3 +413,20 @@ body{
     }
 
 }
+
+.detail-siswa{
+    margin-top:20px;
+}
+
+.detail-siswa p{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+    font-size:16px;
+    color:#475569;
+}
+
+.detail-siswa span{
+    font-weight:bold;
+    color:#0f172a;
+}
