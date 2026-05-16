@@ -14,6 +14,11 @@ $query_total = mysqli_query(
 );
 
 $total_siswa = mysqli_fetch_assoc($query_total);
+$total_keseluruhan = 150;
+
+$sudah_terdata = $total_siswa['total'];
+
+$belum_terdata = $total_keseluruhan - $sudah_terdata;
 
 
 /* TOTAL IPA */
@@ -172,29 +177,30 @@ function toggleMenu(){
 
         <!-- TOTAL SISWA -->
 
-        <a href="datasiswa.php" class="card-link">
+            <a href="datasiswa.php" class="card-link">
 
-            <div class="card-dashboard">
+                <div class="card-dashboard">
 
-                <div class="card-top">
+                    <div class="card-top">
 
-                    <h2>Total Siswa</h2>
+                        <h2>Total Siswa</h2>
 
-                    <i class="bi bi-people-fill"></i>
+                        <i class="bi bi-people-fill"></i>
+
+                    </div>
+
+                    <div class="total">
+                        <?= $total_keseluruhan; ?>
+                    </div>
+
+                    <div class="desc">
+                        <span>Siswa yang sudah terdata : </span>
+                        <strong><?= $sudah_terdata; ?></b> </strong>
+                    </div>
 
                 </div>
 
-                <div class="total">
-                    <?= $total_siswa['total']; ?>
-                </div>
-
-                <div class="desc">
-                    Jumlah seluruh siswa
-                </div>
-
-            </div>
-
-        </a>
+            </a>
 
         <!-- IPA -->
 
