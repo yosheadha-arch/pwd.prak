@@ -1,3 +1,17 @@
+<?php
+
+include 'koneksi.php';
+
+$queryIPA = mysqli_query($konek, 
+"SELECT COUNT(*) AS jumlah_ipa 
+FROM siswa 
+WHERE hasil_peminatan='IPA'");
+
+$dataIPA = mysqli_fetch_assoc($queryIPA);
+
+$jumlahIPA = $dataIPA['jumlah_ipa'];
+
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -297,6 +311,22 @@ body{
                 Saintis
 
             </p>
+
+        </div>
+
+    </div>
+
+    <div class="card-jumlah-ipa">
+
+        <div class="ipa-icon">
+            <i class="fa-solid fa-flask"></i>
+        </div>
+
+        <div class="ipa-info">
+
+            <p>Jumlah Siswa Minat IPA</p>
+
+            <h1><?= $jumlahIPA; ?></h1>
 
         </div>
 

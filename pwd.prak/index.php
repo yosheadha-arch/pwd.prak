@@ -119,31 +119,6 @@ function toggleMenu(){
 </head>
 <body>
 
-<!-- TOPBAR -->
-
-<div class="topbar">
-
-    <div class="topbar-left">
-
-        <span>
-            <i class="bi bi-geo-alt-fill"></i>
-            Jln Babarsari No. 10 Yogyakarta
-        </span>
-
-        <span>
-            <i class="bi bi-telephone-fill"></i>
-            08123456789
-        </span>
-
-        <span>
-            <i class="bi bi-envelope-fill"></i>
-            sman2babarsari@gmail.com
-        </span>
-
-    </div>
-
-</div>
-
 <!-- ===== NAVBAR ===== -->
 
 <div class="navbar-custom">
@@ -157,26 +132,44 @@ function toggleMenu(){
     </div>
 
     <div class="menu">
-        <a href="index.php">Beranda</a>
-        <a href="datasiswa.php">Data Siswa</a>
-        <a href="tambah.php">Tambah Siswa</a>
-        <a href="logout.php">Logout</a>
+        <a href="index.php">
+            <i class="bi bi-house-fill"></i>
+            Beranda
+        </a>
+        <a href="datasiswa.php">
+            <i class="bi bi-people-fill"></i>
+            Data Siswa</a>
+        <a href="tambah.php">
+            <i class="bi bi-person-fill"></i>
+            Tambah Siswa</a>
     </div>
 
     <!-- PROFILE DROPDOWN -->
     <div class="profile-dropdown">
 
-        <div class="profile" onclick="toggleMenu()">
-            <img src="profile.jpg">
-            <span>Admin</span>
-        </div>
+    <div class="profile-btn" onclick="toggleMenu()">
 
-        <div class="dropdown-menu" id="dropdownMenu">
-            <a href="profile.php">Profile</a>
-            <a href="logout.php">Logout</a>
-        </div>
+        <img src="logoprofile.jpg">
 
     </div>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+
+        <a href="#">
+            <i class="bi bi-person-fill"></i>
+            Profile
+        </a>
+
+        <hr>
+
+        <a href="logout.php">
+            <i class="bi bi-box-arrow-right"></i>
+            Logout
+        </a>
+
+    </div>
+
+</div>
 
 </div>
 
@@ -203,7 +196,7 @@ function toggleMenu(){
     <h1>Dashboard Pemetaan Siswa</h1>
 
     <p>
-        Sistem pemetaan minat dan bakat siswa
+        Sistem Pemetaan Minat dan Bakat Siswa
     </p>
 
 </div>
@@ -432,7 +425,7 @@ function toggleMenu(){
 
                 <div>
                     <h5>Telepon</h5>
-                    <p>(0274) 123456</p>
+                    <p>(0274) 7788665</p>
                 </div>
             </div>
 
@@ -441,7 +434,7 @@ function toggleMenu(){
 
                 <div>
                     <h5>Email</h5>
-                    <p>sman2babarsari@gmail.com</p>
+                    <p>info@sman2babarsarisch.id</p>
                 </div>
             </div>
 

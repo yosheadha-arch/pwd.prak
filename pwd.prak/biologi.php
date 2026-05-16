@@ -1,3 +1,18 @@
+<?php
+
+include 'koneksi.php';
+
+$queryBiologi = mysqli_query($konek,
+"SELECT COUNT(*) AS jumlah_biologi
+FROM siswa
+WHERE minat='Biologi'");
+
+$dataBiologi = mysqli_fetch_assoc($queryBiologi);
+
+$jumlahBiologi = $dataBiologi['jumlah_biologi'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -294,6 +309,22 @@ body{
                 Analis Laboratorium
 
             </p>
+
+        </div>
+
+    </div>
+
+    <div class="card-jumlah-biologi">
+
+        <div class="biologi-icon">
+            <i class="bi bi-heart-pulse-fill"></i>
+        </div>
+
+        <div class="biologi-info">
+
+            <p>Jumlah Siswa Minat Biologi</p>
+
+            <h1><?= $jumlahBiologi; ?></h1>
 
         </div>
 

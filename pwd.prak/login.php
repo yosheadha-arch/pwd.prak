@@ -74,13 +74,20 @@ if(isset($_POST['login'])){
 
         .container{
             width:100%;
-            max-width:1200px;
+
+            min-height:100vh;
 
             display:flex;
-            justify-content:space-between;
+
+            justify-content:center;
+
             align-items:center;
 
-            padding:50px;
+            flex-direction:column;
+
+            text-align:center;
+
+            gap:40px;
         }
 
         .welcome-text{
@@ -90,24 +97,31 @@ if(isset($_POST['login'])){
 
         .welcome-text h1{
             font-size:70px;
+
+            color:white;
+
+            font-weight:700;
+
             margin-bottom:15px;
+
+            text-shadow:0 5px 15px rgba(0,0,0,0.4);
         }
 
         .welcome-text p{
-            font-size:24px;
-            line-height:40px;
+            font-size:28px;
+            color: white;
         }
 
         .login-box{
-            width:400px;
+            width:420px;
 
-            background:rgba(255,255,255,0.95);
+            background:white;
 
             padding:40px;
 
-            border-radius:20px;
+            border-radius:25px;
 
-            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+            box-shadow:0 10px 30px rgba(0,0,0,0.2);
         }
 
         .login-box h2{

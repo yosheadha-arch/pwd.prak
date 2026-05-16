@@ -1,3 +1,18 @@
+<?php
+
+include 'koneksi.php';
+
+$queryFisika = mysqli_query($konek, 
+"SELECT COUNT(*) AS jumlah_fisika 
+FROM siswa 
+WHERE hasil_peminatan='Fisika'");
+
+$dataFisika = mysqli_fetch_assoc($queryFisika);
+
+$jumlahFisika = $dataFisika['jumlah_fisika'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -292,6 +307,22 @@ body{
         </div>
 
     </div>
+
+    <div class="card-jumlah-fisika">
+
+    <div class="fisika-icon">
+        <i class="fa-solid fa-atom"></i>
+    </div>
+
+    <div class="fisika-info">
+
+        <p>Jumlah Siswa Minat Fisika</p>
+
+        <h1><?= $jumlahFisika; ?></h1>
+
+    </div>
+
+</div>
 
     <!-- BUTTON -->
 

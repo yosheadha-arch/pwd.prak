@@ -1,6 +1,3 @@
-# datasiswa.php
-
-```php
 <?php
 
 include 'koneksi.php';
@@ -280,4 +277,4 @@ onclick="return confirm('Yakin ingin menghapus data?')">
 
 </body>
 </html>
-```
+

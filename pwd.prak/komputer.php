@@ -1,51 +1,57 @@
+<?php
+
+include 'koneksi.php';
+
+$queryKomputer = mysqli_query($konek,
+"SELECT COUNT(*) AS jumlah_komputer
+FROM siswa
+WHERE minat='Komputer'");
+
+$dataKomputer = mysqli_fetch_assoc($queryKomputer);
+
+$jumlahKomputer = $dataKomputer['jumlah_komputer'];
+
+?>
+
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Peminatan Komputer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <style>
+    * { 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+    }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+    /*background*/
+    body{
+        min-height: 100vh;
+        background:  linear-gradient(rgba(15,23,42,0.8), rgba(37,99,235,0.7)),
+        url('bg.jpg');
+        background-size: cover;
+        background-position:center;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:40px;
+    }
 
-body{
-    min-height:100vh;
+    /*card*/ 
+    .card {
+        width: 100%;
+        max-widht: 1100px;
+        background: rgba(255,255,255,0.95);
+        border-radius:25px;
+        padding:45px;
+        box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    }
 
-    background:
-    linear-gradient(rgba(15,23,42,0.8), rgba(37,99,235,0.7)),
-    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400');
-
-    background-size:cover;
-    background-position:center;
-
-    padding:50px;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-
-    background:white;
-
-    border-radius:25px;
-
-    padding:45px;
-
-    box-shadow:0 10px 35px rgba(0,0,0,0.2);
-}
-
-.header{
+    .header{
     display:flex;
     align-items:center;
     gap:20px;
@@ -63,11 +69,16 @@ body{
     color:#0f172a;
 }
 
+/* DESKRIPSI */
+
 .desc{
     color:#475569;
     line-height:1.9;
     margin-bottom:40px;
+    font-size:16px;
 }
+
+/* GRID */
 
 .grid{
     display:grid;
@@ -75,36 +86,51 @@ body{
     gap:30px;
 }
 
-.card{
+/* BOX */
+
+.box{
     background:#f8fafc;
     padding:30px;
     border-radius:20px;
+    transition:0.3s;
 }
 
-.card h2{
+.box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.box h2{
     color:#0f172a;
-    margin-bottom:20px;
+    margin-bottom:18px;
+    font-size:22px;
 }
 
-.card ul{
+.box ul{
     padding-left:20px;
 }
 
-.card li{
+.box li{
     margin-bottom:12px;
     color:#475569;
+    line-height:1.7;
 }
 
-.card p{
+.box p{
     color:#475569;
     line-height:1.8;
 }
 
+/* BUTTON */
+
 .btn{
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
     margin-top:40px;
 
-    padding:14px 22px;
+    padding:14px 24px;
 
     background:#2563eb;
     color:white;
@@ -112,16 +138,23 @@ body{
     text-decoration:none;
 
     border-radius:12px;
+
+    font-weight:600;
+
+    transition:0.3s;
 }
 
 .btn:hover{
     background:#1d4ed8;
+    transform:translateY(-3px);
 }
+
+/* RESPONSIVE */
 
 @media(max-width:768px){
 
-    .grid{
-        grid-template-columns:1fr;
+    .card{
+        padding:30px 20px;
     }
 
     .header{
@@ -130,23 +163,35 @@ body{
     }
 
     .header h1{
-        font-size:32px;
+        font-size:30px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
     }
 }
 
 </style>
+
 </head>
+
 <body>
 
-<div class="container">
+<div class="card">
+
+    <!-- HEADER -->
 
     <div class="header">
 
-        <i class="bi bi-pc-display"></i>
+        <i class="bi bi-bank2"></i>
 
-        <h1>Peminatan Komputer</h1>
+        <h1>
+            Peminatan Komputer
+        </h1>
 
     </div>
+
+    <!-- DESKRIPSI -->
 
     <p class="desc">
 
@@ -158,27 +203,37 @@ body{
         Cocok bagi siswa yang memiliki kemampuan
         logika, analisis, kreativitas teknologi,
         dan ketertarikan pada dunia IT.
-
     </p>
+
+    <!-- GRID -->
 
     <div class="grid">
 
-        <div class="card">
+        <!-- MAPEL -->
 
-            <h2>Mata Pelajaran Pendukung</h2>
+        <div class="box">
+
+            <h2>
+                <i class="bi bi-book-fill"></i>
+                Mata Pelajaran Pendukung
+            </h2>
 
             <ul>
                 <li>Matematika</li>
-                <li>Informatika / TIK</li>
+                <li>Informatika</li>
                 <li>Bahasa Inggris</li>
-                <li>Logika Komputer</li>
             </ul>
 
         </div>
 
-        <div class="card">
+        <!-- INDIKATOR -->
 
-            <h2>Indikator Kesesuaian</h2>
+        <div class="box">
+
+            <h2>
+                <i class="bi bi-bar-chart-fill"></i>
+                Indikator Kesesuaian
+            </h2>
 
             <ul>
                 <li>Nilai Komputer ≥ 85</li>
@@ -189,9 +244,14 @@ body{
 
         </div>
 
-        <div class="card">
+        <!-- JURUSAN -->
 
-            <h2>Rekomendasi Jurusan</h2>
+        <div class="box">
+
+            <h2>
+                <i class="bi bi-mortarboard-fill"></i>
+                Rekomendasi Jurusan
+            </h2>
 
             <p>
 
@@ -205,9 +265,14 @@ body{
 
         </div>
 
-        <div class="card">
+        <!-- KARIER -->
 
-            <h2>Prospek Karier</h2>
+        <div class="box">
+
+            <h2>
+                <i class="bi bi-briefcase-fill"></i>
+                Prospek Karier
+            </h2>
 
             <p>
 
@@ -224,9 +289,29 @@ body{
 
     </div>
 
+    <div class="card-jumlah-komputer">
+
+        <div class="ips-icon">
+            <i class="fa-solid fa-flask"></i>
+        </div>
+
+        <div class="komputer-info">
+
+            <p>Jumlah Siswa Minat Komputer</p>
+
+            <h1><?= $jumlahKomputer; ?></h1>
+
+        </div>
+
+    </div>
+
+    <!-- BUTTON -->
+
     <a href="index.php" class="btn">
 
-        ← Kembali ke Beranda
+        <i class="bi bi-arrow-left-circle-fill"></i>
+
+        Kembali ke Dashboard
 
     </a>
 

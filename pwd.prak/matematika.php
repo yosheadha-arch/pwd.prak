@@ -1,3 +1,25 @@
+<?php
+
+include 'koneksi.php';
+
+$queryMatematika = mysqli_query($konek, 
+"SELECT COUNT(*) AS jumlah_matematika 
+FROM siswa 
+WHERE hasil_peminatan='Matematika'");
+
+$dataMatematika = mysqli_fetch_assoc($queryMatematika);
+
+$jumlahMatematika = $dataMatematika['jumlah_matematika'];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematika</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <style>
 
 *{
@@ -280,6 +302,22 @@ body{
                 Konsultan Statistik
 
             </p>
+
+        </div>
+
+    </div>
+
+    <div class="card-jumlah-matematika">
+
+        <div class="matematika-icon">
+            <i class="fa-solid fa-square-root-variable"></i>
+        </div>
+
+        <div class="matematika-info">
+
+            <p>Jumlah Siswa Minat Matematika</p>
+
+            <h1><?= $jumlahMatematika; ?></h1>
 
         </div>
 

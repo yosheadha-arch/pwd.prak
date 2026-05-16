@@ -373,8 +373,6 @@ body{
 
         <form action="inputnilai.php" method="POST">
 
-        semua input disini
-
     <button type="submit" class="btn">
         Proses Analisis
     </button>

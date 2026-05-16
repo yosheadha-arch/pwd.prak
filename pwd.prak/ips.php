@@ -1,3 +1,18 @@
+<?php
+
+include 'koneksi.php';
+
+$queryIPS = mysqli_query($konek, 
+"SELECT COUNT(*) AS jumlah_ips 
+FROM siswa 
+WHERE hasil_peminatan='IPS'");
+
+$dataIPS = mysqli_fetch_assoc($queryIPS);
+
+$jumlahIPS = $dataIPS['jumlah_ips'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -272,6 +287,22 @@
                 Pegawai Pemerintahan
 
             </p>
+
+        </div>
+
+    </div>
+
+    <div class="card-jumlah-ips">
+
+        <div class="ips-icon">
+            <i class="fa-solid fa-flask"></i>
+        </div>
+
+        <div class="ips-info">
+
+            <p>Jumlah Siswa Minat IPS</p>
+
+            <h1><?= $jumlahIPS; ?></h1>
 
         </div>
 
